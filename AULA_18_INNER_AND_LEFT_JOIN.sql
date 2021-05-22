@@ -1,0 +1,18 @@
+----LEF OUTER JOIN
+-----LEF JOIN
+
+---QUERO DESCOBRIR QUAIS PESSOAS TEM UM CARTAO DE CREDITO REGISTRADO
+
+SELECT*
+FROM person.person PP
+INNER JOIN SALES.PersonCreditCard PC ON PP.BusinessEntityID = PC.BusinessEntityID
+---INNER JOIN 19118 LINHAS
+
+SELECT*
+FROM person.person PP
+LEFT JOIN SALES.PersonCreditCard PC ON PP.BusinessEntityID = PC.BusinessEntityID
+where PC.CreditCardID IS null
+---LEFT JOIN JOIN 19972 LINHAS
+
+SELECT 19972 - 19118
+
